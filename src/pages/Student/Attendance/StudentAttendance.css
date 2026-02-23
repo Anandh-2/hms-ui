@@ -1,0 +1,80 @@
+.student-attendance-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.status-card,
+.logs-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.status-text.present {
+  color: #1c8c3a;
+}
+
+.status-text.outside {
+  color: #d9534f;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.toolbar input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.btn-secondary {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #eef1ff;
+  color: #3f4db8;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+.badge {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.badge.entry {
+  color: #1c8c3a;
+}
+
+.badge.exit {
+  color: #d9534f;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-wrap: wrap;
+  }
+}

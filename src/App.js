@@ -12,22 +12,19 @@ import StudentsList from './pages/Admin/Students/StudentsList';
 import AttendancePage from './pages/Admin/Attendance/AttendancePage';
 import WardensList from './pages/Admin/Wardens/WardensList';
 import LeaveApplications from './pages/Admin/LeaveApplications/LeaveApplications';
-// Note: ReminderSettings - Create using PAGES_IMPLEMENTATION_GUIDE.md
-// import ReminderSettings from './pages/Admin/Reminders/ReminderSettings';
+import ReminderSettings from './pages/Admin/Reminders/ReminderSettings';
 
 // Warden Pages (many reuse Admin components)
 import WardenDashboard from './pages/Warden/Dashboard/WardenDashboard';
 // Warden uses same components: StudentsList, AttendancePage, LeaveApplications
-// Note: CollegeLeaveStatus - Create using PAGES_IMPLEMENTATION_GUIDE.md
-// import CollegeLeaveStatus from './pages/Warden/CollegeLeave/CollegeLeaveStatus';
+import CollegeLeaveStatus from './pages/Warden/CollegeLeave/CollegeLeaveStatus';
 
 // Student Pages
 import StudentDashboard from './pages/Student/Dashboard/StudentDashboard';
-// Note: Create these files using PAGES_IMPLEMENTATION_GUIDE.md (templates provided)
-// import StudentProfile from './pages/Student/Profile/StudentProfile';
-// import StudentAttendance from './pages/Student/Attendance/StudentAttendance';
-// import CollegeLeave from './pages/Student/CollegeLeave/CollegeLeave';
-// import StudentLeaveApplications from './pages/Student/LeaveApplications/LeaveApplications';
+import StudentProfile from './pages/Student/Profile/StudentProfile';
+import StudentAttendance from './pages/Student/Attendance/StudentAttendance';
+import CollegeLeave from './pages/Student/CollegeLeave/CollegeLeave';
+import StudentLeaveApplications from './pages/Student/LeaveApplications/LeaveApplications';
 
 import './App.css';
 
@@ -70,13 +67,11 @@ function App() {
             </PrivateRoute>
           } />
           
-          {/* Uncomment after creating ReminderSettings component
           <Route path="/admin/reminders" element={
             <PrivateRoute allowedRoles={['admin']}>
               <ReminderSettings />
             </PrivateRoute>
           } />
-          */}
           
           {/* Warden Routes - Many reuse Admin components */}
           <Route path="/warden/dashboard" element={
@@ -103,7 +98,6 @@ function App() {
             </PrivateRoute>
           } />
           
-          {/* Uncomment after creating these components
           <Route path="/warden/college-leave" element={
             <PrivateRoute allowedRoles={['warden']}>
               <CollegeLeaveStatus />
@@ -115,7 +109,6 @@ function App() {
               <ReminderSettings />
             </PrivateRoute>
           } />
-          */}
           
           {/* Student Routes */}
           <Route path="/student/dashboard" element={
@@ -124,7 +117,6 @@ function App() {
             </PrivateRoute>
           } />
           
-          {/* Uncomment after creating these components
           <Route path="/student/profile" element={
             <PrivateRoute allowedRoles={['student']}>
               <StudentProfile />
@@ -148,7 +140,6 @@ function App() {
               <StudentLeaveApplications />
             </PrivateRoute>
           } />
-          */}
           
           {/* Error Routes */}
           <Route path="/unauthorized" element={

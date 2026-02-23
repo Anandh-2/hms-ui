@@ -1,0 +1,85 @@
+.student-leave-page {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  padding: 10px;
+}
+
+.status {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.pending {
+  color: #cc8a00;
+}
+
+.status.approved {
+  color: #1c8c3a;
+}
+
+.status.rejected {
+  color: #d9534f;
+}
+
+.btn-danger {
+  background: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .student-leave-page {
+    grid-template-columns: 1fr;
+  }
+}
